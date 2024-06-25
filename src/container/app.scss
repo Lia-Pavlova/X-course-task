@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e0dfde;
+  font-family: SegoeUI-SemiBold-final, Segoe UI Semibold, sans-serif;
+  height: 100%;
+  min-width: 1000px;
+
+  a {
+    text-decoration: none;
+    color: black;  
+  }
+
+  footer a{
+    font-size: 28px;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  header a{
+    font-size: 28px;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right,rgb(224, 223, 222) 8%, rgb(2, 136, 209) 47%, rgb(224, 223, 222) 90%,rgb(2, 136, 209) 100%);
+    justify-content: space-between;
+    height: 100px;
+    min-height: 100px;
+    padding: 0 20px;
+    margin: 0px 20px 0px 20px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    z-index: 100;
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 10px;
+        height: 90px;
+      }
+    }
+
+    .controls {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      #cartImg {
+        height: 70px;
+        width: 70px;
+        margin-right: 10px;
+      }
+
+      .cartControl {
+        display: inline-block;
+        position: relative;
+
+        .quantityCircleBadge {
+          position: absolute;
+          top: 5px;
+          right: 15px;
+        }
+        .sumRectangleBadge {
+          position: absolute;
+          top: 50px;
+          left: -15px;
+        }
+      }
+      .cartControl:hover {
+        scale: 1.05;
+        transition: 0.3s all;
+      }
+
+      .userBlock {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Dancing Script', cursive;
+
+        #avatarImg {
+          height: 80px;
+          width: 80px;
+          border: solid 3px rgba(0, 0, 0, 0.5);
+          border-radius: 50% ;
+          margin: 5px;
+        }
+      }
+    }
+
+    .controls > * {
+      margin-left: 10px;
+    }
+
+    .controls.hidden > * {
+      display: none;
+    }
+  }
+
+  main {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+    position: relative;
+
+    .signInSection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 30px;
+      width: 400px;
+
+      .avatarContainer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+
+        img {
+          height: 250px;
+          border: solid 3px rgba(0, 0, 0, 0.5);
+          border-radius: 50% ;   
+        }
+      }
+
+      .signInButton {
+        margin-top: 15px;
+      }
+
+      .disabledButtonStyle {
+        cursor: not-allowed;
+      }
+    }
+
+    .cartSection {
+      min-height: calc(100vh - 200px);
+      min-width: 800px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1360px;
+      height: 100%;
+      width: 100%;
+
+      .cartHeader {
+        display: flex;
+        background-color: #e0dfde;
+        position: sticky;
+        padding: 30px 0;
+        top: 100px;
+        z-index: 99;
+        opacity: 0.95;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .cartControls {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .clearCartButton {
+            margin-right: 10px;
+          }
+        }
+
+        .cartControls.hidden {
+          display: none;
+        }
+      }
+
+      .cartTableContainer {
+        margin: 10px 0 30px 0;
+        width: 800px;
+        border-radius: 10px;
+
+        .cartBookImage {
+          height: 170px;
+          width: 120px;
+
+          border-radius: 10px;
+          border: 1px solid #e0dfde;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th {
+          font-size: 16px;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        td {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .emptyCartSection{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgb(2, 136, 209);
+      font-size: 25px;
+      font-family: 'Dancing Script', cursive;
+      
+    }
+
+    .errSection {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+      img {
+        height: 300px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        color: rgb(2, 136, 209);
+        font-size: 28px;
+        font-family:'Dancing Script', cursive;
+      }
+    }
+
+    .bookListSection {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1360px;
+      min-height: calc(100vh - 200px);
+      width: 100%;
+      height: 100%;
+      padding-bottom: 15px;
+
+      .bookFilterSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        padding: 30px 0;
+        background-color: #e0dfde;
+        position: sticky;
+        top: 100px;
+        z-index: 99;
+        opacity: 0.95;
+
+        .selectPrice {
+          width: 250px;
+          font-family: 'Dancing Script', cursive;
+        }
+
+        .searchInput {
+          width: 250px;
+          margin: 10px;
+          font-family: 'Dancing Script', cursive;
+        }
+
+        .selectPrice {
+          width: 250px;
+          margin: 10px;
+        }
+
+        .filterIcon {
+          margin-left: 10px;
+        }
+
+        .filterIcon.hidden {
+          display: none;
+        }
+      }
+
+      .bookCard {
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        width: 260px;
+        height: 430px;
+        cursor: pointer;
+
+        .bookCardHeader {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 360px;
+          width: 100%;
+          margin-top: 10px;
+
+          .bookCardImage {
+            margin-bottom: 10px;
+            height: 250px;
+            width: 200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: 1px solid #e0dfde;
+          }
+          .bookCardTitle {
+            margin-bottom: 2px;
+            margin-top: 0;
+            margin-left: 10px;
+            font-size: 18px;
+            font-family: 'Dancing Script', cursive;
+          }
+          p {
+            margin-top: 0;
+            margin-bottom: 2px;
+            margin-left: 10px;
+            height: 42px;
+          }
+        }
+
+        .bookCardFooter {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          height: 45px;
+          margin: 5px 20px;
+        }
+      }
+    }
+
+    .specificBookSection {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 1500px;
+      padding: 10px 50px 50px 50px;
+      margin: 20px 0;
+      border-radius: 10px;
+
+      .specificBookHeader {
+        margin: 20px 0;
+      }
+
+      .backToBooksButton {
+        z-index: 99;
+      }
+
+      .specificBookBody {
+        display: flex;
+        flex-direction: row;
+
+        .specificBookCard {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          max-width: 800px;
+
+          .bookImg {
+            height: 328px;
+            width: 250px;
+            border-radius: 10px;
+            border: 1px solid #e0dfde;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          }
+        
+
+          .specificBookCardHeader {
+            display: flex;
+            height: 328px;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+            * {
+              margin-top: 0px;
+            }
+          }
+
+          .specificBookCardFooter {
+            padding: 10px;
+            margin: 10px 50px 0 0;
+            text-align: justify;
+            text-indent: 20px;
+          }
+        }
+
+        .specificBookOrderDetails {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          .specificBookOrderCard {
+            width: 360px;
+            height: 200px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0px 0px 20px 0px;
+
+            .priceSection {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              height: 45px;
+            }
+
+            .quantitySection {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+            }
+
+            .totalSumSection {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              height: 45px;
+            }
+
+            .changeButtonSection {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+            }
+
+            .addButtonSection {
+              display: flex;
+              justify-content: flex-end;
+              width: 100%;
+            }
+          }
+
+          .specificBookCartInfo {
+            margin-top: 20px;
+            width: 350px;
+            height: 250px;
+            padding: 20px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    background: linear-gradient(to left,rgb(224, 223, 222) 8%, rgb(2, 136, 209) 47%, rgb(224, 223, 222) 90%,rgb(2, 136, 209) 100%);
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: calc(100% - 40px);
+    margin: 0px 20px 0px 20px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    display: none;
+  }
+}
+
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialogContent * {
+  margin: 20px;
+}
+
+.flyingBookImage {
+  z-index: 101;
+}

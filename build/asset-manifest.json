@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/X-course-task/static/css/main.d5d51d2f.css",
+    "main.js": "/X-course-task/static/js/main.6a19d2a2.js",
+    "static/media/notFound.gif": "/X-course-task/static/media/notFound.59b46f4510af6cc07976.gif",
+    "static/media/favicon.ico": "/X-course-task/static/media/favicon.6c2fe57df6607fbd9478.ico",
+    "static/media/noCover.png": "/X-course-task/static/media/noCover.623799e4662f90c39f76.png",
+    "static/media/error.png": "/X-course-task/static/media/error.63c0a77c4bff297abd71.png",
+    "static/media/bye.png": "/X-course-task/static/media/bye.e78e63fcf3f88d12baae.png",
+    "static/media/ups.png": "/X-course-task/static/media/ups.50e42cd893477ebb7a11.png",
+    "static/media/avatar.png": "/X-course-task/static/media/avatar.28f722919af7afe91b5b.png",
+    "static/media/cart.png": "/X-course-task/static/media/cart.6cca81dfaa7b4521c318.png",
+    "index.html": "/X-course-task/index.html",
+    "main.d5d51d2f.css.map": "/X-course-task/static/css/main.d5d51d2f.css.map",
+    "main.6a19d2a2.js.map": "/X-course-task/static/js/main.6a19d2a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5d51d2f.css",
+    "static/js/main.6a19d2a2.js"
+  ]
+}
